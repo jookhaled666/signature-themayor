@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
 <title>The Mayor Professional Signature</title>
 <style>
   /* إعدادات الخطوط العامة */
@@ -24,13 +26,27 @@
     .logo-adjust { margin: 0 auto !important; margin-bottom: 25px !important; } /* مسافة أسفل اللوجو في الموبايل */
     .border-remove { border-right: none !important; border-bottom: 2px solid #FCA382 !important; padding-bottom: 25px !important; margin-bottom: 25px !important; }
   }
+
+  /* إجبار الوضع الفاتح (خلفية بيضاء ونصوص داكنة) في الدارك مود لبرامج الإيميل */
+  @media (prefers-color-scheme: dark) {
+    body, .force-bg-white { background-color: #ffffff !important; }
+    .force-text-black { color: #111111 !important; }
+    .force-text-dark-gray { color: #333333 !important; }
+    .force-text-gray { color: #666666 !important; }
+    .force-text-light-gray { color: #888888 !important; }
+  }
+  [data-ogsb] .force-bg-white { background-color: #ffffff !important; }
+  [data-ogsc] .force-text-black { color: #111111 !important; }
+  [data-ogsc] .force-text-dark-gray { color: #333333 !important; }
+  [data-ogsc] .force-text-gray { color: #666666 !important; }
+  [data-ogsc] .force-text-light-gray { color: #888888 !important; }
 </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #ffffff;">
+<body class="force-bg-white" style="margin: 0; padding: 0; background-color: #ffffff;">
 
-<div style="background-color: #ffffff; padding: 20px;">
+<div class="force-bg-white" style="background-color: #ffffff; padding: 20px;">
   
-  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff;">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" class="force-bg-white" style="background-color: #ffffff;">
     <tr>
       <td align="left">
         
@@ -45,11 +61,11 @@
             
             <td valign="middle" class="mobile-stack mobile-pt" style="padding-left: 25px;">
               
-              <div class="mobile-center" style="font-size: 18px; font-weight: 700; color: #111111 !important; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 4px; font-family: Arial, Helvetica, sans-serif;">
+              <div class="mobile-center force-text-black" style="font-size: 18px; font-weight: 700; color: #111111 !important; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 4px; font-family: Arial, Helvetica, sans-serif;">
                 MOHAMED NAGIA
               </div>
               
-              <div class="mobile-center" style="font-size: 10px; font-weight: 500; color: #666666 !important; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">
+              <div class="mobile-center force-text-gray" style="font-size: 10px; font-weight: 500; color: #666666 !important; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">
                 FOUNDER & CEO
               </div>
 
@@ -60,7 +76,7 @@
                     <img src="https://img.icons8.com/ios-filled/50/FCA382/phone.png" width="13" height="13" style="display: block;" alt="Phone">
                   </td>
                   <td valign="middle" style="padding-bottom: 6px; font-size: 12px; color: #333333 !important;" class="mobile-center">
-                    <a href="tel:+971563259250" style="text-decoration: none; color: #333333 !important; font-weight: 500;">+971 56 325 9250</a>
+                    <a href="tel:+971563259250" class="force-text-dark-gray" style="text-decoration: none; color: #333333 !important; font-weight: 500;">+971 56 325 9250</a>
                   </td>
                 </tr>
 
@@ -69,7 +85,7 @@
                     <img src="https://img.icons8.com/ios-filled/50/FCA382/mail.png" width="13" height="13" style="display: block;" alt="Email">
                   </td>
                   <td valign="middle" style="padding-bottom: 6px; font-size: 12px; color: #333333 !important;" class="mobile-center">
-                    <a href="mailto:mohamed@themayor.me" style="text-decoration: none; color: #333333 !important; font-weight: 500;">mohamed@themayor.me</a>
+                    <a href="mailto:mohamed@themayor.me" class="force-text-dark-gray" style="text-decoration: none; color: #333333 !important; font-weight: 500;">mohamed@themayor.me</a>
                   </td>
                 </tr>
 
@@ -78,7 +94,7 @@
                     <img src="https://img.icons8.com/ios-filled/50/FCA382/globe.png" width="13" height="13" style="display: block;" alt="Web">
                   </td>
                   <td valign="middle" style="padding-bottom: 10px; font-size: 12px; color: #333333 !important;" class="mobile-center">
-                    <a href="https://themayor.me" style="text-decoration: none; color: #333333 !important; font-weight: 500;">www.themayor.me</a>
+                    <a href="https://themayor.me" class="force-text-dark-gray" style="text-decoration: none; color: #333333 !important; font-weight: 500;">www.themayor.me</a>
                   </td>
                 </tr>
               </table>
@@ -87,7 +103,7 @@
 
               <table border="0" cellpadding="0" cellspacing="0" width="100%">
                 <tr>
-                  <td valign="middle" class="mobile-center" style="font-size: 10px; color: #888888 !important; line-height: 1.2;">
+                  <td valign="middle" class="mobile-center force-text-light-gray" style="font-size: 10px; color: #888888 !important; line-height: 1.2;">
                     Dubai CommerCity, UAE
                   </td>
                   <td align="right" valign="middle" class="mobile-center" style="padding-left: 15px;">
